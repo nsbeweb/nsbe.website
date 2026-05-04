@@ -15,8 +15,6 @@ function closeMenu() {
 // Fade animation
 const faders = document.querySelectorAll('.fade');
 
-let loadIndex = 0;
-
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting && !entry.target.classList.contains('show')) {
@@ -26,7 +24,6 @@ const observer = new IntersectionObserver(entries => {
     });
 }, { threshold: 0.15 });
 
-// On load, stagger sections already visible in the viewport
 window.addEventListener('load', () => {
     let delay = 0;
     faders.forEach(el => {
