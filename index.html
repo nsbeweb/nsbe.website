@@ -14,19 +14,25 @@
 <!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo">
-        <div class="logo-box">N</div>
+        <img src="logo.png" alt="Drexel NSBE Logo" class="logo-img">
         <span>Drexel NSBE</span>
     </div>
 
-    <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#board">Board</a></li>
-        <li><a href="#join">Join</a></li>
-        <li><a href="#benefits">Benefits</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#mission" onclick="closeMenu()">Mission</a></li>
+        <li><a href="#board" onclick="closeMenu()">Board</a></li>
+        <li><a href="#join" onclick="closeMenu()">Join</a></li>
+        <li><a href="#benefits" onclick="closeMenu()">Benefits</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
     </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </nav>
 
 <!-- HERO -->
