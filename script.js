@@ -1,15 +1,31 @@
 // Fade animation
 const faders = document.querySelectorAll('.fade');
 
+let loadIndex = 0;
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !entry.target.classList.contains('show')) {
+            entry.target.style.animationDelay = '0s';
             entry.target.classList.add('show');
         }
     });
-}, { threshold: 0.2 });
+}, { threshold: 0.15 });
 
-faders.forEach(el => observer.observe(el));
+// On load, stagger sections already visible in the viewport
+window.addEventListener('load', () => {
+    let delay = 0;
+    faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            el.style.animationDelay = `${delay}s`;
+            el.classList.add('show');
+            delay += 0.15;
+        } else {
+            observer.observe(el);
+        }
+    });
+});
 
 // Board generation
 const boardGrid = document.getElementById("boardGrid");
