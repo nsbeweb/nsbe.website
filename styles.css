@@ -24,12 +24,16 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    min-width: 0;
+    flex-shrink: 0;
 }
 
 .logo-img {
     height: 48px;
     width: auto;
+    max-width: 48px;
     object-fit: contain;
+    display: block;
 }
 
 .nav-links {
@@ -278,6 +282,16 @@ body {
 }
 
 .gold-link:hover {
+    text-decoration: underline;
+}
+
+.join-steps a {
+    color: #c89a2b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.join-steps a:hover {
     text-decoration: underline;
 }
 
