@@ -199,6 +199,12 @@ body {
     padding: 60px 40px;
     border-radius: 12px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.join-box .btn {
+    margin-top: auto;
 }
 
 .join-step-badge {
@@ -254,6 +260,26 @@ body {
 /* CONTACT */
 .contact {
     text-align: center;
+}
+
+/* FADE IN ANIMATION */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade {
+    opacity: 0;
+}
+
+.fade.show {
+    animation: fadeInUp 0.7s ease forwards;
 }
 
 /* MOBILE */
