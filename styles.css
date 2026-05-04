@@ -72,6 +72,7 @@ body {
     border: none;
     cursor: pointer;
     padding: 4px;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -334,18 +335,23 @@ body {
         display: flex;
     }
 
+    .navbar {
+        padding: 16px 6%;
+    }
+
     .nav-links {
         display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 65px;
         left: 0;
         width: 100%;
         flex-direction: column;
         background: #ffffff;
         border-top: 1px solid #eee;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        padding: 16px 0;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        padding: 8px 0 16px;
         gap: 0;
+        z-index: 999;
     }
 
     .nav-links.open {
@@ -361,13 +367,10 @@ body {
         padding: 14px 24px;
         font-size: 1rem;
         border-bottom: 1px solid #f0f0f0;
+        font-weight: 500;
     }
 
     .nav-links a::after {
         display: none;
-    }
-
-    .navbar {
-        padding: 16px 6%;
     }
 }
