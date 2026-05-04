@@ -1,3 +1,17 @@
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+});
+
+function closeMenu() {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+}
+
 // Fade animation
 const faders = document.querySelectorAll('.fade');
 
