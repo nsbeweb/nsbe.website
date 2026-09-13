@@ -60,7 +60,7 @@ boardMembers.forEach(member => {
     const card = document.createElement("div");
     card.className = "board-card";
 
-    const imgFile = member.name
+    const imgFile = "headshots/" + member.name
         .replace(/\s+/g, "")
         .replace(/-/g, "") + ".png";
 
